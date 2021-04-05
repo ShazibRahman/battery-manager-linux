@@ -44,9 +44,9 @@ Disable the systemd service
 
 `sudo systemctl disable battery-manager.service`
 #### Using cron
-In case you don't use systemd, you can also do this by using cron,by running  `sudo crontab -e` and then pasting the following line :
+In case you don't use systemd, you can also do this by using cron,by running  `sudo crontab -e` and then pasting the following line (it's a single line):
 
-`@reboot echo YOUR_PREFFERED_THRESHOLD(60%,80%,etc) > /sys/power_supply/BATTERY_NAME/charge_control_end_threshold`
+```@reboot echo YOUR_PREFFERED_THRESHOLD(60%,80%,etc) > /sys/power_supply/BATTERY_NAME/charge_control_end_threshold```
 
 ## More info
 * [ASUS Battery Information Center](https://www.asus.com/support/FAQ/1038475/)
